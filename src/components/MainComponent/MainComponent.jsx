@@ -7,6 +7,7 @@ import Title from '../Title/Title';
 import Leaderboards from '../Leaderboards/Leaderboards';
 import SQLDisplay from '../SQLDisplay/SQLDisplay';
 import Tab from '../Tab/Tab';
+import Theme from '../Theme/Theme';
 
 function MainComponent() {
     const [content, setContent] = useState({title: "Press any tab to Get Started", features: []});
@@ -61,6 +62,7 @@ function MainComponent() {
 
     return (
         <div className='outer-container'>
+            <Theme/>
             <Title/>
             <div className="container">
                 <div className="tab">

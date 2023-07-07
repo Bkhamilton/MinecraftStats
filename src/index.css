@@ -47,6 +47,13 @@ minecraft {
   src: local('Minecraft2'), local('Minecraft2-Regular'), url(./fonts/minecraft-font/MinecraftRegular-Bmg3.otf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Minecrafter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Minecrafter'), local('Minecrafter-Regular'), url(./fonts/Minecraft-title-font/Minecrafter.Alt.ttf) format('truetype');
+}
+
 @media screen and (min-width: 440px) {
   .mobile-only {
     display: none;

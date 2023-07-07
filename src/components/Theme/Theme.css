@@ -1,0 +1,62 @@
+.theme-container {
+    position: absolute;
+    padding: 1%;
+}
+
+.sun {
+    cursor: pointer;
+    width: 2vw;
+    height: 2vw;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px 4px #fffef2;
+}
+
+.moon {
+    cursor: pointer;
+    width: 2vw;
+    height: 2vw;
+}
+
+.sun-start {
+    right: 16%;
+    top: 3%;
+}
+
+
+@keyframes sunset-x {
+    0% {
+        right: 20%;
+    }
+    100% {
+        right: 80%;
+    }
+}
+
+@keyframes sunset-y {
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes sunrise-x {
+    0% {
+        right: 80%;
+    }
+    100% {
+        right: 20%;
+    }
+}
+
+@keyframes sunrise-y {
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+.sunset-x-element {
+  animation: sunset-x 3s ease forwards;
+}
+
+.sunrise-x-element {
+  animation: sunrise-x 3s ease forwards;
+}
