@@ -1,0 +1,31 @@
+.main-title {
+    margin: 0rem;
+    padding-top: 10px;
+    font-family: 'Minecraft', sans-serif;
+    font-size: calc(42px + 0.8vw);
+}
+
+.main-subtitle {
+    margin: 2vh 1vw;
+    font-family: 'Enchanted', sans-serif;
+    font-size: calc(5px + 0.8vw);
+}
+
+.motd {
+    transform: rotate(-4deg);
+    text-shadow: 2px 2px #3f3f01;
+    color: #ffff01;
+}
+
+@keyframes bobbing {
+  0% {
+    transform: translateY(-12%) rotate(-4deg);
+  }
+  100% {
+    transform: translateY(12%) rotate(-4deg);
+  }
+}
+
+.bobbing-element {
+  animation: bobbing 1.5s cubic-bezier(.37,.25,.64,.82) infinite alternate;
+}

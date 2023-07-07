@@ -1,0 +1,108 @@
+.outer-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-message {
+    text-align: center;
+}
+
+.main-title {
+    margin: 0rem;
+    padding-top: 10px;
+    font-family: 'Minecraft', sans-serif;
+    font-size: calc(42px + 0.8vw);
+}
+
+.main-subtitle {
+    margin: 2vh 1vw;
+    font-family: 'Enchanted', sans-serif;
+    font-size: calc(5px + 0.8vw);
+}
+
+.container {
+  display: flex;
+  height: 80vh;
+  width: 90vw;
+  background: transparent;
+  border-radius: 16px;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  width: 5vw;
+  background-image: url('../../images/MinecraftButtonColor.png');
+  background-repeat: repeat;
+  height: 80vh;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid black;
+  box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+}
+
+.tab:active {
+  box-shadow: inset -2px -4px #0004, inset 2px 2px #FFF5;
+}
+
+.content {
+  width: 85vw;
+  padding: 0rem;
+}
+
+.content-bottom{
+  display: flex;
+}
+
+.motd {
+    position: absolute;
+    top: 4.8%;
+    right: 31%;
+    transform: rotate(-4deg);
+    text-shadow: 2px 2px #3f3f01;
+    color: #ffff01;
+}
+
+@media (max-width: 820px) {
+  .container {
+      width: calc(100vw - 20px);
+  }
+
+  .content {
+    width: calc(95vw - 20px);
+  }
+
+  .tab {
+      width: calc(10vw - 20px);
+  }
+}
+
+@media (max-width: 620px) {
+    .container {
+        width: 100vw;
+    }
+
+    .content {
+      width: 95vw;
+    }
+
+    .tab {
+        width: 10vw;
+    }
+}
+
+@keyframes bobbing {
+  0% {
+    top: 4.6%;
+  }
+  100% {
+    top: 5.6%;
+  }
+}
+
+.bobbing-element {
+  animation: bobbing 1.5s cubic-bezier(.37,.25,.64,.82) infinite alternate;
+}

@@ -1,0 +1,28 @@
+.tabItem {
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-family: 'Minecraft', sans-serif;
+  font-size: calc(10px + 1vw);
+}
+
+.tab-title {
+  color: white;
+  text-shadow: 2px 2px #404040;
+}
+
+.tabItem:hover .tab-title {
+  color: #FFFFA0;
+}
+
+.tooltip {
+  position: absolute;
+  left: 10%;
+  padding: 8px 16px;
+  background-color: #121212;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+}
