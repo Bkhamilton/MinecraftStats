@@ -3,7 +3,6 @@
   text-align: center;
   cursor: pointer;
   background: transparent;
-  border: none;
   font-family: 'Minecraft', sans-serif;
   font-size: calc(10px + 1vw);
 }

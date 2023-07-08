@@ -12,6 +12,11 @@ import Theme from '../Theme/Theme';
 function MainComponent() {
     const [content, setContent] = useState({title: "Press any tab to Get Started", features: []});
     const [hoveredTab, setHoveredTab] = useState(null);
+    const [lightMode, setLightMode] = useState(true);
+
+    const handleToggleTheme = () => {
+      setLightMode((prevMode) => !prevMode);
+    };
 
     const handleClick = (index) => {
         setContent(tabs[index]);
@@ -62,7 +67,7 @@ function MainComponent() {
 
     return (
         <div className='outer-container'>
-            <Theme/>
+            <Theme lightMode={lightMode} toggleTheme={handleToggleTheme}/>
             <Title/>
             <div className="container">
                 <div className="tab">
