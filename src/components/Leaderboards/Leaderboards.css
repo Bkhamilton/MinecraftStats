@@ -13,3 +13,44 @@
     border-radius: 16px;
     background-color: var(--background-color);
 }
+
+.leaderboard-icons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sort-icons {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 10px;
+}
+
+.ball {
+    width: 2vw;
+    height: 2vw;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.ball-hostile {
+    background-color: blue;
+}
+
+.ball-passive {
+    background-color: green;
+}
+
+.ball-crops {
+    background-color: rgb(104, 73, 17);
+}
+
+.ball-meat {
+    background-color: maroon;
+}
+
+.ball-fish {
+    background-color: blue;
+}
