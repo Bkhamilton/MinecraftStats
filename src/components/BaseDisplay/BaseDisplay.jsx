@@ -17,7 +17,6 @@ const BaseDisplay = ({ node, onClick }) => {
   return (
     <div className="base-display-outer">
       <div className='base-display'>
-        <h1 className='display-title'>{node.title}</h1>
         <div className="buttons-container">
           {node.features.map((feature, index) => (
           <button
@@ -32,6 +31,7 @@ const BaseDisplay = ({ node, onClick }) => {
           ))}
         </div>
       </div>
+      <h1 className='display-title-test'><minecraft>{node.title}</minecraft></h1>
     </div>
   );
 };

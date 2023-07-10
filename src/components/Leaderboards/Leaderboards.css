@@ -28,6 +28,10 @@
     gap: 10px;
 }
 
+.display-results {
+    display: flex;
+}
+
 .ball {
     width: 2vw;
     height: 2vw;
@@ -70,4 +74,24 @@
 
 .ball-pig {
     background-color: #D550B7;
+}
+
+.ball-carrot {
+    background-color: #EC6E05;
+}
+
+.ball-baked {
+    background-color: #AE815C;
+}
+
+.ball-potato {
+    background-color: #89684D;
+}
+
+.ball-bread {
+    background-color: #8E4E1A;
+}
+
+.ball-steak {
+    background-color: #f9906f;
 }

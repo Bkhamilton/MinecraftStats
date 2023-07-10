@@ -7,12 +7,13 @@
   font-size: calc(10px + 1vw);
   width: 2.5vw;
   height: 2.5vw;
+  min-width: fit-content;
   border-radius: 8px;
   place-self: center;
+  color: white;
 }
 
 .tab-title {
-  color: white;
   text-shadow: 2px 2px #404040;
 }
 
@@ -28,4 +29,10 @@
   color: #fff;
   border-radius: 10px;
   font-size: 14px;
+}
+
+.active-button {
+  background-color: #636363;
+  border: 2px solid #121212;
+  color: #FFFFA0;
 }

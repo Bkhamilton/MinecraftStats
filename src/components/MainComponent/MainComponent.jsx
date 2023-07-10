@@ -49,35 +49,43 @@ function MainComponent() {
     const tabs = {
         0: {
             title: "Mobs",
-            features: [{type:"Hostile", list: ["Skeleton", "Zombie", "Creeper", "Enderman"]}, {type: "Passive", list: ["Cow", "Sheep", "Chicken", "Pig"]}]
+            features: [{type:"Hostile", list: ["Skeleton", "Zombie", "Creeper", "Enderman"]}, {type: "Passive", list: ["Cow", "Sheep", "Chicken", "Pig"]}],
+            options: ["Killed", "Killed By"]
         },
         1: {
             title: "Farming",
-            features: [{type: "Crops", list: ["Carrot", "Baked Potato", "Potato", "Bread"]}, {type: "Meat", list: ["Steak", "Chicken"]}, {type: "Fish", list:["Salmon", "Cod"]}]
+            features: [{type: "Crops", list: ["Carrot", "Baked Potato", "Potato", "Bread"]}, {type: "Meat", list: ["Steak", "Chicken"]}, {type: "Fish", list:["Salmon", "Cod"]}],
+            options: ["Planted", "Collected", "Eaten"]
         },
         2: {
             title: "Ores",
-            features: [{type: "Overworld", list: ["Diamond", "Emerald", "Iron", "Gold", "Coal"]}, {type: "Nether", list: ["Quartz", "Ancient Debris"]}]
+            features: [{type: "Overworld", list: ["Diamond", "Emerald", "Iron", "Gold", "Coal"]}, {type: "Nether", list: ["Quartz", "Ancient Debris"]}],
+            options: ["Mined", "Picked Up"]
         },
         3: {
             title: "Deaths",
-            features: [{type: "Mobs", list: ["Creeper", "Enderman", "Blaze", "Zombie"]}, {type: "World", list: ["Fall Damage", "Lava", "Drowning"]}]
+            features: [{type: "Mobs", list: ["Creeper", "Enderman", "Blaze", "Zombie"]}, {type: "World", list: ["Fall Damage", "Lava", "Drowning"]}],
+            options: ["Killed"]
         },
         4: {
             title: "Achievements",
-            features: [{type: "Type 1"}, {type: "Type 2"}, {type: "Type 3"}]
+            features: [{type: "Type 1"}, {type: "Type 2"}, {type: "Type 3"}],
+            options: ["Collected"]
         },
         5: {
             title: "Blocks",
-            features: [{type: "Natural Blocks"}, {type: "Building Blocks"}, {type: "Job Blocks"}]
+            features: [{type: "Natural"}, {type: "Wood"}, {type: "Building"}, {type: "Job"}],
+            options: ["Picked Up", "Crafted", "Placed"]
         },
         6: {
             title: "Items",
-            features: [{type: "Tools"}, {type: "Weapons"}, {type: "Valuables"}]
+            features: [{type: "Tools"}, {type: "Weapons"}, {type: "Valuables"}],
+            options: ["Picked Up", "Crafted", "Used"]
         },
         7: {
             title: "Movement",
-            features: [{type: "Walking"}, {type: "Swimming"}, {type: "Falling"}]
+            features: [{type: "Walking"}, {type: "Swimming"}, {type: "Falling"}],
+            options: ["Total"]
         }
     }
 
@@ -95,6 +103,7 @@ function MainComponent() {
                             onMouseEnter={() => handleTabHover(index)}
                             onMouseLeave={handleTabLeave}
                             isHovered={hoveredTab === index}
+                            isActive={tabs[index].title === content.title}
                         />
                     ))}
                 </div>

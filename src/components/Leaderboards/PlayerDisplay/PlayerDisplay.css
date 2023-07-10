@@ -1,0 +1,27 @@
+@import url('../../../index.css');
+
+.player-display {
+    height: 59vh;
+    width: 33%;
+    text-align: center;
+}
+
+.result-inner {
+    width: auto;
+    height: stretch;
+    padding: 2% 5%;
+}
+
+.leaderboard-bar {
+    width: 80%;
+    border: 2px solid hotpink;
+    background-color: rgb(252, 124, 188);
+}
+
+.highest:hover {
+    box-shadow: inset 2px 2px 2px 2px gold, 4px 4px 2px 2px slategrey;
+}
+
+.player-display minecraft {
+    color: var(--color);
+}

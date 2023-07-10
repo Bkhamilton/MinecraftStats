@@ -19,9 +19,13 @@ const Leaderboards = ({ list }) => {
             </div>
           ))}
         </div>
-        <div>
-          <PlayerDisplay player={{name: "Ben", stat: 80}} place={1} highestStat={100}/>
+        {false && (        
+        <div className='display-results'>
+          <PlayerDisplay player={{name: "Ben", stat: 90}} place={1} highestStat={90}/>
+          <PlayerDisplay player={{name: "Kenneth", stat: 70}} place={2} highestStat={90}/>
+          <PlayerDisplay player={{name: "Kev", stat: 50}} place={3} highestStat={90}/>
         </div>
+        )}
       </div>
     </div>
 
