@@ -7,9 +7,9 @@ const Leaderboards = ({ list }) => {
       <div className='leaderboards'>
         <h1 className='display-title'>Leaderboards</h1>
         <div className='leaderboard-icons'>
-          {list.map(({ type, list }, index) => (
+          {list?.map(({ type, list }, index) => (
             <div key={index} className='sort-icons'>
-              {list.map((item, itemIndex) => (
+              {list?.map((item, itemIndex) => (
                 <div
                   key={itemIndex}
                   className={`ball ball-${type.toLowerCase()}`}

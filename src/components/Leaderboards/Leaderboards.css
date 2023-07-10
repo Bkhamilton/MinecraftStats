@@ -33,6 +33,11 @@
     height: 2vw;
     border: 2px solid black;
     border-radius: 8px;
+    cursor: pointer;
+}
+
+.ball:hover {
+    box-shadow: 0px 0px 4px 1px gray;
 }
 
 .ball-hostile {
