@@ -1,5 +1,6 @@
 import React from 'react';
 import './Leaderboards.css';
+import PlayerDisplay from './PlayerDisplay/PlayerDisplay';
 
 const Leaderboards = ({ list }) => {
   return (
@@ -12,11 +13,14 @@ const Leaderboards = ({ list }) => {
               {list?.map((item, itemIndex) => (
                 <div
                   key={itemIndex}
-                  className={`ball ball-${type.toLowerCase()}`}
+                  className={`ball ball-${item.toLowerCase()}`}
                 ></div>
               ))}
             </div>
           ))}
+        </div>
+        <div>
+          <PlayerDisplay player={{name: "Ben", stat: 80}} place={1} highestStat={100}/>
         </div>
       </div>
     </div>

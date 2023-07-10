@@ -40,22 +40,34 @@
     box-shadow: 0px 0px 4px 1px gray;
 }
 
-.ball-hostile {
-    background-color: blue;
+.ball-zombie {
+    background-color: #27531E;
 }
 
-.ball-passive {
-    background-color: green;
+.ball-creeper {
+    background-color: #34C217;
 }
 
-.ball-crops {
-    background-color: rgb(104, 73, 17);
+.ball-skeleton {
+    background-color: #E2EAE1;
 }
 
-.ball-meat {
-    background-color: maroon;
+.ball-enderman {
+    background-color: #2D0852;
 }
 
-.ball-fish {
-    background-color: blue;
+.ball-cow {
+    background-color: #FFFFFF;
+}
+
+.ball-sheep {
+    background-color: #464B4F;
+}
+
+.ball-chicken {
+    background-color: #F8F8F8;
+}
+
+.ball-pig {
+    background-color: #D550B7;
 }
