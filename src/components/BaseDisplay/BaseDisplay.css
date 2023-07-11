@@ -12,6 +12,7 @@
   border: 1px solid black;
   border-radius: 16px;
   background-color: var(--background-color);
+  display: flex;
 }
 
 .display-title-test {
@@ -39,15 +40,15 @@
 
 .buttons-container {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
   justify-content: left;
   height: 100%;
+  gap: 1vw;
 }
 
 .feature-button {
   cursor: pointer;
-  padding: 0.5% 1%;
+  padding: 2% 0%;
+  min-width: fit-content;
   background-image: url('../../images/MinecraftButtonColor.png');
   border-radius: 8px;
   border: 1px solid black;
@@ -64,6 +65,33 @@
 
 .feature-button:hover {
   color: #FFFFA0;
+}
+
+.query-option-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+
+.query-option-box {
+  width: calc(12px + 0.2vw);
+  height: calc(12px + 0.2vw);
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 33%;
+  cursor: pointer;
+}
+
+.query-option {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+  color: var(--color);
+  padding: 0% 4%;
 }
 
 @media (max-width: 820px) {

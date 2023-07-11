@@ -32,7 +32,7 @@
 }
 
 .active-button {
-  background-color: #636363;
+  background-color: rgb(70, 70, 70, 0.6);
   border: 2px solid #121212;
   color: #FFFFA0;
 }
