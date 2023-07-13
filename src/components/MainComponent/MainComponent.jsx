@@ -55,6 +55,7 @@ function MainComponent() {
     const handleClick = (index) => {
         setContent(tabs[index]);
         setStatTrack([]);
+        setToggleOptions(toggleOptionStates.map(() => false))
     };
 
     const handleTabHover = (index) => {
