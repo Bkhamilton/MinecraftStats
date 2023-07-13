@@ -13,6 +13,7 @@
   border-radius: 16px;
   background-color: var(--background-color);
   display: flex;
+  text-align: center;
 }
 
 .display-title-test {
@@ -38,25 +39,19 @@
   color: var(--color);
 }
 
-.buttons-container {
-  display: flex;
-  justify-content: left;
-  height: 100%;
-  gap: 1vw;
-}
-
 .feature-button {
   cursor: pointer;
-  padding: 2% 0%;
+  padding: 0% 1%;
   min-width: fit-content;
   background-image: url('../../images/MinecraftButtonColor.png');
   border-radius: 8px;
   border: 1px solid black;
   box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
   font-family: 'Minecraft2';
-  font-size: calc(10px + 0.8vw);
+  font-size: calc(14px + 0.5vw);
   color: white;
   text-shadow: 2px 2px #404040;
+  height: 100%;
 }
 
 .feature-button:active {
@@ -73,25 +68,39 @@
   height: 100%;
   width: fit-content;
   flex-wrap: wrap;
+  margin: 0% 1%;
 }
 
 .query-option-box {
   width: calc(12px + 0.2vw);
   height: calc(12px + 0.2vw);
-  background-color: white;
-  border: 1px solid white;
+  border: 1px solid var(--color);
   border-radius: 33%;
   cursor: pointer;
 }
 
+.query-option-box:active {
+  background-color: var(--button-background);
+  border: 1px solid var(--background-color);
+}
+
 .query-option {
   display: flex;
-  height: 50%;
+  height: 33%;
   width: 100%;
   align-items: center;
   gap: 8px;
   color: var(--color);
-  padding: 0% 4%;
+  padding: 0% 0%;
+}
+
+.icon-list-container {
+  height: 100%;
+  border: 2px solid black;
+}
+
+.active-option-button {
+  background-color: var(--button-background);
 }
 
 @media (max-width: 820px) {

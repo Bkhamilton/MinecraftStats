@@ -10,10 +10,12 @@ import Tab from '../Tab/Tab';
 import Theme from '../Theme/Theme';
 
 function MainComponent() {
-    const [content, setContent] = useState({title: "Press any tab to Get Started", features: []});
+    const [content, setContent] = useState({title: "Press any tab to Get Started", features: [], options: []});
     const [statTrack, setStatTrack] = useState([]);
     const [hoveredTab, setHoveredTab] = useState(null);
     const [lightMode, setLightMode] = useState(true);
+    const [toggleTypeStates, setToggleTypes] = useState(new Array(content.features.length).fill(false));
+    const [toggleOptionStates, setToggleOptions] = useState(new Array(content.options.length).fill(false));
 
     const handleType = (type) => {
         const toAdd = content.features.filter((feature) => feature.type === type);
@@ -27,6 +29,23 @@ function MainComponent() {
               return existingFeatures;
             }
         });
+    }
+
+    const toggleType = (index, type) => {
+      setToggleTypes((prevState) => {
+        const newToggleTypes = [...prevState];
+        newToggleTypes[index] = !newToggleTypes[index];
+        return newToggleTypes;
+      });
+      handleType(type);
+    };
+  
+    const toggleOptions = (index) => {
+      setToggleOptions((prevState) => {
+        const newToggleOptions = [...prevState];
+        newToggleOptions[index] = !newToggleOptions[index];
+        return newToggleOptions;
+      })
     }
 
     const handleToggleTheme = () => {
@@ -49,43 +68,43 @@ function MainComponent() {
     const tabs = {
         0: {
             title: "Mobs",
-            features: [{type:"Hostile", list: ["Skeleton", "Zombie", "Creeper", "Enderman"]}, {type: "Passive", list: ["Cow", "Sheep", "Chicken", "Pig"]}],
-            options: ["Killed", "Killed By"]
+            features: [{type:"Hostile", list: ["Skeleton", "Zombie", "Creeper", "Enderman"]}, {type: "Passive", list: ["Cow", "Sheep", "Chicken", "Pig"]}, {type: "Pet", list: ["Dog", "Cat", "Horse"]}, {type: "Golem", list: ["Iron", "Snow"]}],
+            options: [{name: "Killed", table: "mobkills"}, {name: "Killed By", table: "playerkills"}]
         },
         1: {
             title: "Farming",
             features: [{type: "Crops", list: ["Carrot", "Baked Potato", "Potato", "Bread"]}, {type: "Meat", list: ["Steak", "Chicken"]}, {type: "Fish", list:["Salmon", "Cod"]}],
-            options: ["Planted", "Collected", "Eaten"]
+            options: [{name: "Planted", table: "farming"}, {name: "Collected", table: "itempickup"}, {name: "Eaten", table: "itemuse"}]
         },
         2: {
             title: "Ores",
             features: [{type: "Overworld", list: ["Diamond", "Emerald", "Iron", "Gold", "Coal"]}, {type: "Nether", list: ["Quartz", "Ancient Debris"]}],
-            options: ["Mined", "Picked Up"]
+            options: [{name: "Mined", table: "blockmined"}, {name: "Picked Up", table: "itempickup"}]
         },
         3: {
             title: "Deaths",
             features: [{type: "Mobs", list: ["Creeper", "Enderman", "Blaze", "Zombie"]}, {type: "World", list: ["Fall Damage", "Lava", "Drowning"]}],
-            options: ["Killed"]
+            options: [{name: "Killed", table: "playerkills"}]
         },
         4: {
             title: "Achievements",
             features: [{type: "Type 1"}, {type: "Type 2"}, {type: "Type 3"}],
-            options: ["Collected"]
+            options: [{name: "Collected"}]
         },
         5: {
             title: "Blocks",
             features: [{type: "Natural"}, {type: "Wood"}, {type: "Building"}, {type: "Job"}],
-            options: ["Picked Up", "Crafted", "Placed"]
+            options: [{name: "Picked Up"}, {name: "Crafted"}, {name: "Placed"}]
         },
         6: {
             title: "Items",
             features: [{type: "Tools"}, {type: "Weapons"}, {type: "Valuables"}],
-            options: ["Picked Up", "Crafted", "Used"]
+            options: [{name: "Picked Up"}, {name: "Crafted"}, {name: "Used"}]
         },
         7: {
             title: "Movement",
             features: [{type: "Walking"}, {type: "Swimming"}, {type: "Falling"}],
-            options: ["Total"]
+            options: [{name: "Total"}]
         }
     }
 
@@ -108,7 +127,14 @@ function MainComponent() {
                     ))}
                 </div>
                 <div className="content">
-                    <BaseDisplay node={content} onClick={handleType}/>
+                    <BaseDisplay
+                        node={content} 
+                        list={statTrack}
+                        toggleTypeStates={toggleTypeStates}
+                        toggleOptionStates={toggleOptionStates}
+                        toggleType={toggleType}
+                        toggleOptions={toggleOptions}
+                    />
                     <div className='content-bottom'>
                         <Leaderboards list={statTrack}/>
                         <SQLDisplay/>

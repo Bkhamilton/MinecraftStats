@@ -2,12 +2,14 @@
   --background-color: #fff;
   --background-image: url('./images/MinecraftDay.png');
   --color: #000000;
+  --button-background: #404040;
 }
 
 :root[theme="dark"] {
   --background-color: #121212;
   --background-image: url('./images/MinecraftNight.png');
   --color: #DEE4E7;
+  --button-background: #e4e4e4;
 }
 
 body {

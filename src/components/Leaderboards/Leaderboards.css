@@ -22,10 +22,11 @@
 }
 
 .sort-icons {
+    padding-right: 10px;
     display: flex;
-    flex-direction: row;
-    width: fit-content;
     gap: 10px;
+    height: 100%;
+    align-items: center;
 }
 
 .display-results {

@@ -7,18 +7,6 @@ const Leaderboards = ({ list }) => {
     <div className="leaderboards-outer">
       <div className='leaderboards'>
         <h1 className='display-title'>Leaderboards</h1>
-        <div className='leaderboard-icons'>
-          {list?.map(({ type, list }, index) => (
-            <div key={index} className='sort-icons'>
-              {list?.map((item, itemIndex) => (
-                <div
-                  key={itemIndex}
-                  className={`ball ball-${item.toLowerCase()}`}
-                ></div>
-              ))}
-            </div>
-          ))}
-        </div>
         {false && (        
         <div className='display-results'>
           <PlayerDisplay player={{name: "Ben", stat: 90}} place={1} highestStat={90}/>

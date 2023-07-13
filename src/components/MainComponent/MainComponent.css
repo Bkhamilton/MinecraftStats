@@ -1,25 +1,25 @@
 .outer-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title-message {
-    text-align: center;
+  text-align: center;
 }
 
 .main-title {
-    margin: 0rem;
-    padding-top: 10px;
-    font-family: 'Minecraft', sans-serif;
-    font-size: calc(42px + 0.8vw);
+  margin: 0rem;
+  padding-top: 10px;
+  font-family: 'Minecraft', sans-serif;
+  font-size: calc(42px + 0.8vw);
 }
 
 .main-subtitle {
-    margin: 2vh 1vw;
-    font-family: 'Enchanted', sans-serif;
-    font-size: calc(5px + 0.8vw);
+  margin: 2vh 1vw;
+  font-family: 'Enchanted', sans-serif;
+  font-size: calc(5px + 0.8vw);
 }
 
 .container {
